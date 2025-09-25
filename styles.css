@@ -2,11 +2,12 @@ body {
   margin: 0;
   padding: 0;
   background: #ccee66;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 20px 160px;
   height: 100vh;
   font-family: "Noto Sans", sans-serif;
   overflow: hidden;
+  transition: background 0.5s ease;
 }
 
 body::before {
@@ -34,45 +35,65 @@ body::after {
 
 .logo {
   width: 80px;
+  position: relative;
+  z-index: 2;
 }
 
 h4 {
   font-size: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
 }
 
 h1 {
   font-size: 80px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 p {
   font-size: 16px;
   margin-bottom: 40px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
 }
 
 .botao-carrinho {
   background: #a3be52;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 15px 30px;
+  border-radius: 30px;
   font-size: 16px;
   color: #000000;
   cursor: pointer;
   transition: 0.5s;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
 }
 
 .botao-carrinho:hover {
   opacity: 0.7;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .imagem-tenis {
   width: 800px;
   transform: rotate(-25deg);
   filter: drop-shadow(30px 45px 40px #161616);
-  transition: 1s;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .troca-efeito {
-    opacity: 0;
-    transform: rotate(-25deg) translateY(-30px);
+  opacity: 0;
+  transform: rotate(-25deg) translateY(-30px);
 }
 
 .caixa-principal {
@@ -93,6 +114,7 @@ p {
   position: relative;
   display: flex;
   gap: 20px;
+  margin-top: 30px;
 }
 
 .botoes {
@@ -100,6 +122,13 @@ p {
   height: 80px;
   border-radius: 50%;
   cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.botoes:hover {
+  transform: scale(1.1);
+  border-color: #fff;
 }
 
 .botoes:active {
@@ -116,4 +145,107 @@ p {
 
 .rosa {
   background: #ff9eb5;
+}
+
+@media (max-width: 1400px) {
+  body {
+    padding: 20px 100px;
+  }
+
+  .imagem-tenis {
+    width: 650px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    padding: 20px 60px;
+  }
+
+  .imagem-tenis {
+    width: 550px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    padding: 20px 40px;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .caixa-principal {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .imagem-tenis {
+    width: 450px;
+  }
+
+  body::after {
+    font-size: 180px;
+  }
+
+  .caixa-botoes {
+    justify-content: center;
+    margin: 40px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .imagem-tenis {
+    width: 350px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  body::after {
+    font-size: 150px;
+  }
+
+  .botoes {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .imagem-tenis {
+    width: 280px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  body::after {
+    font-size: 120px;
+  }
+
+  .botoes {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo {
+    width: 60px;
+  }
 }
