@@ -1,4 +1,4 @@
-# 🚗 Tesla - Réplica de Página  
+# 👟 Project Nike Tennis 
 
 Um **projeto interativo de tênis Nike**, construída com **HTML, CSS e JavaScript**, permitindo alterar cores e imagens do produto de forma dinâmica.  
 O projeto possui **animais suaves, responsividade e botão de adicionar ao carrinho**. 
